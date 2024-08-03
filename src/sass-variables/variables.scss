@@ -1,0 +1,86 @@
+
+
+
+
+//Colors
+$background-main: #050A30;
+$background-secondary: #7EC8E3;
+$text-primary: #f3f2f2;
+// $text-secondary: #002efd;
+$text-secondary: #fd002e;
+
+//Typography
+$typography-main: "Arial", "Helvetica", san-serif;
+
+//placeholders
+
+%reset{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+%button{
+    width: 2.5rem;
+    height: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+%skillbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#000000, #000000) padding-box,
+        linear-gradient(to right, $text-secondary, $background-secondary) border-box;
+    border-radius: 50em;
+    border: 4px solid transparent;
+    width: 200px;
+    height: 150px;
+    padding: 0.5rem;
+    margin: 20px;
+    border-radius: 10px;
+
+    p{
+        color: $text-primary;
+        font-family: $typography-main;
+        text-shadow:  1px 1px 1px #000000;
+    }
+}
+
+%subtitle{
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%text-subtitle{
+    color: $text-primary;
+    font-family: $typography-main;
+    font-size: 3.5rem;
+    text-shadow:  1px 1px 1px #000000;
+    margin-bottom: 3rem;
+}
+
+%text-subtitles-line{
+    border-bottom: 14px solid #ff4d5a;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    left: 2rem;
+    top: 3.8rem;
+    z-index: -1;
+}
+
+%project-title{
+    color: $text-primary;
+    font-family: $text-primary;
+    font-size: 2rem;
+    text-shadow:  1px 1px 1px #000000;
+    margin: 1rem;
+}

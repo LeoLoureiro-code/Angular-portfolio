@@ -1,0 +1,152 @@
+@import "../../sass-variables/variables.scss";
+
+
+.projects-section{
+    z-index: 1; 
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.subtile{
+    @extend %subtitle;
+    margin-top: 3rem;
+
+
+    h2{
+        @extend %text-subtitle;
+    }
+    
+    h2::before{
+        content:'';
+        @extend %text-subtitles-line;
+    }
+}
+
+h3{
+    @extend %project-title;
+}
+
+.project-card {
+    padding: 20px;
+    max-width: 900px;
+    margin: 5rem auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#000000, #000000) padding-box,
+        linear-gradient(to right, $text-secondary, $background-secondary) border-box;
+    border: 4px solid transparent;
+    border-radius: 15px;
+
+    .project-header {
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+        text-align: center;
+
+        .project-image {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+        height: auto;
+        max-height: 600px;
+        object-fit: cover;
+        object-position:top;
+        }
+
+        .project-title {
+        font-size: 1.75em;
+        margin: 10px 0;
+        padding: 0;
+        color: $text-primary;
+        font-family: $typography-main;
+        }
+    }
+    
+    .project-body {
+      flex: 1;
+      .project-description {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+        color: $text-primary;
+        font-family: $typography-main;
+      }
+  
+      .project-technologies {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 15px;
+  
+        li {
+          background: lighten($text-primary, 10%);
+          padding: 8px 12px;
+          margin-bottom: 8px;
+          border-radius: 4px;
+          font-size: 1em;
+          font-family: $typography-main;
+          
+        }
+      }
+    }
+  
+    .project-footer {
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      width: 200px;
+      margin: 0 auto;
+  
+      .project-link {
+        text-decoration: none;
+        color: $text-primary;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding: 12px 18px;
+        border: 1px solid $text-secondary;
+        border-radius: 4px;
+        transition: background-color 0.3s, color 0.3s;
+        font-family: $typography-main;
+  
+        &:hover {
+          background-color: $text-secondary;
+          color: #fff;
+          transition: 1s;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-card {
+      padding: 15px;
+      max-width: 90%;
+  
+      .project-header {
+        .project-title {
+          font-size: 1.5em;
+        }
+      }
+  
+      .project-body {
+        .project-description {
+          font-size: 1em;
+        }
+  
+        .project-technologies li {
+          font-size: 0.9em;
+          padding: 6px 10px;
+        }
+  
+        .project-role {
+          font-size: 1em;
+        }
+      }
+  
+      .project-footer {
+        .project-link {
+          font-size: 1em;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }

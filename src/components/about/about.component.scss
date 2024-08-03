@@ -1,0 +1,110 @@
+@import "../../sass-variables/variables.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.about-section{
+    z-index: 1; 
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.subtile{
+
+    @extend %subtitle;
+
+    h2{
+        @extend %text-subtitle;
+    }
+    
+    h2:before{
+    content: '';
+    @extend %text-subtitles-line;
+    }
+}
+
+
+
+
+.about-info{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 2rem;
+ 
+}
+
+.about-intro{
+    font-family: $typography-main;
+    color: $text-primary;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+    text-shadow:  1px 1px 1px #000000;
+}
+
+.info{
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .info-img{
+        width: 300px;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.skills{
+    width: auto;
+    display: flex
+}
+
+.skill{
+    @extend %skillbox;
+
+
+    .skill-img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .skill-name{
+        font-weight: 500;
+    }
+}
+
+@media (width <= 1200px) {
+    .about-info{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .skills{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (width <= 700px){
+    .about-intro{
+        font-size: 1rem;
+        width: 100%;
+        word-break: break-all;
+    }
+
+    .info-img{
+        width: 200px;
+    }
+}

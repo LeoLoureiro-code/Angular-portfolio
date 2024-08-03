@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="hamburger" (click)="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ul class="nav-list" [class.active]="isMenuOpen">
+    <li class="nav-unit-anchor">
+      <a href="#home" class="nav-unit" (click)="onAnchorClick()">Home</a>
+    </li>
+    <li class="nav-unit-anchor">
+      <a href="#about" class="nav-unit" (click)="onAnchorClick()">About</a>
+    </li>
+    <li class="nav-unit-anchor">
+      <a href="#projects" class="nav-unit" (click)="onAnchorClick()">Projects</a>
+    </li>
+    <li class="nav-unit-anchor">
+      <a href="#contact" class="nav-unit" (click)="onAnchorClick()">Contact</a>
+    </li>
+  </ul>
+</nav>

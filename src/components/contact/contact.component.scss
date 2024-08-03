@@ -1,0 +1,73 @@
+@import "../../sass-variables/variables.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+
+.contact-section{
+    z-index: 1; 
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.subtile{
+
+    @extend %subtitle;
+
+    h2{
+        @extend %text-subtitle;
+    }
+    
+    h2:before{
+    content: '';
+    @extend %text-subtitles-line;
+    }
+}
+
+.contacts-div{
+    display: flex;
+    max-width: 900px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+
+}
+
+.contact-link{
+    width: 100px;
+    height: 100px;
+
+    p{
+        font-family: $typography-main;
+        color: $text-primary;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+.link-img{
+    width: 100%;
+    height: auto;
+}
+
+@media (width < 700px){
+    .contacts-div{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contact-link{
+        margin-bottom: 3rem;
+
+        p{
+            margin-top: 1rem;
+        }
+    }
+}
